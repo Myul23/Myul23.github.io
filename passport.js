@@ -1,11 +1,15 @@
 function LoginCheck() {
     var point = document.getElementById("pass").value;
     point = point.toLowerCase();
-    if ((point === "study") || (point === "lesson")) {
-        var change = "<a href='Review Lessons\\Total.html' target='_self'>Playground</a>";
-        document.getElementsByTagName("strong")[0].innerHTML = change;
-    } else if (point === "덕질") {
-        var change = "<a href='A.G.O.S\\Entrance.html' target='_self'>Playground</a>";
-        document.getElementsByTagName("strong")[0].innerHTML = change;
-    }
+
+    var change = "<a href='";
+    if (point === "sample") change += "0. Sample\\"; // 이거 생각보다 좋은데?
+    else if (point === "덕질") change += "A.G.O.S\\Entrance.html";
+    else if (point === "interesting") change += "Interesting\\";
+    else if ((point === "lesson") || (point === "lessons"))
+        change += "Review Lessons\\Total.html";
+    else change += "index.html";
+    change += "' target='_self'>Playground</a>";
+
+    document.getElementsByTagName("strong")[0].innerHTML = change;
 }

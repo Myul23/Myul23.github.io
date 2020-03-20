@@ -7,9 +7,10 @@ function LoginCheck() {
     else if (point === "덕질") change += "A.G.O.S\\Entrance.html";
     else if (point === "interesting") change += "Interesting\\";
     else if ((point === "lesson") || (point === "lessons"))
-        change += "Review Lessons\\Total.html";
+        change += "Review Lessons\\Core.html";
     else change += "index.html";
     change += "' target='_self'>Playground</a>";
 
     document.getElementsByTagName("strong")[0].innerHTML = change;
 }
+

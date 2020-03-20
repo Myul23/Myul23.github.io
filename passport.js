@@ -13,4 +13,3 @@ function LoginCheck() {
 
     document.getElementsByTagName("strong")[0].innerHTML = change;
 }
-

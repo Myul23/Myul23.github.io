@@ -9,9 +9,17 @@ body > div {
     padding: 3%;
 }
 
+input {
+    outline: none;
+}
+
 button {
-    margin-top: 3%;
     font-size: 100%;
+    margin-top: 3%;
+}
+
+a:link, a:visited {
+    color: black;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,33 +1,54 @@
 body {
-  font-size: 130%;
+  font-size: 170%;
+  color: forestgreen;
   text-align: center;
 }
 
-body > div {
-  border: solid 1px;
-  margin: 18.49% 38% 18.49% 38%;
-  padding: 3%;
+div {
+  background-color: white;
+  border: 2px solid darkseagreen;
+  border-radius: 0.6em;
+  float: left;
+  margin: 0.5em;
+  padding-bottom: 0.2em;
+  width: 23.3%;
 }
 
-input { outline: none;}
-
-button {
-  font-size: 100%;
-  margin-top: 3%;
+h4 {
+  border-bottom: 2px solid darkseagreen;
+  color: lightseagreen;
+  font-style: italic;
+  margin: 0px;
 }
 
-a { color: black; }
-
-@media screen and (max-width: 960px) and (min-height: 700px) {
-  body > div { margin: 39.9% 30% 39.9% 30%; }
+a {
+  color: lightseagreen;
+  outline: none;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 960px) and (max-height: 700px),
-screen and (device-aspect-ratio: 3/4) {
-  body > div { margin: 12.3% 30% 12.3% 30%; }
+dl {
+  margin: 0px;
+  text-align: left;
+}
+
+dt { margin-left: 1.2em; }
+
+dd { margin-left: 2em; }
+
+hr {
+  border-bottom: 1px solid darkseagreen;
+  margin: 1px;
+}
+
+@media screen and (max-width: 960px) and (max-height: 1000px) {
+  div { width: 29.9%; }
 }
 
 @media screen and (max-width: 400px) and (max-height: 700px) {
-  body > div { margin: 68.8% 15% 68.8% 15%; }
-  input { width: 8em; }
+  div {
+    float: none;
+    margin: 0.5em auto 0.5em auto;
+    width: 90%;
+  }
 }

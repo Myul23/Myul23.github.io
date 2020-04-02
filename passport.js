@@ -1,5 +1,4 @@
 "use strict";
-LoginCheck();
 
 function LoginCheck() {
   var point = document.getElementById("pass").value;

@@ -7,9 +7,10 @@ body > div {
   border: solid 1px;
   margin: 18.49% 38% 18.49% 38%;
   padding: 3%;
+  text-align: center;
 }
 
-input { outline: none;}
+input { outline: none; }
 
 button {
   font-size: 100%;

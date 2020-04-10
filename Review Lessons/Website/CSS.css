@@ -1,0 +1,54 @@
+table {
+  border-collapse: collapse;
+  border-color: darkseagreen;
+}
+
+table {
+  border-collapse: collapse;
+  display: none;
+  margin-left: 0.82em;
+  margin-right: 0.82em;
+  text-align: center;
+}
+
+td {
+  border: 2px solid darkseagreen;
+  width: 50em;
+}
+
+button {
+  background-color: inherit;
+  color: lightseagreen;
+  font-size: 1em;
+}
+
+/* CSS explanation */
+div > a { color: forestgreen; }
+
+span {
+  color: black;
+  opacity: 0.4;
+}
+
+select {
+  border-color: darkseagreen;
+  color: forestgreen;
+  outline: none;
+  transform: translateX(-0.25em);
+  width: auto;
+}
+
+div.box {
+  display: none;
+  transform: translateX(-1em);
+}
+
+/* whold, one by one */
+@media screen and (min-width: 1000px) and (min-height: 900px) {
+  td.disappear { display: table-cell; }
+}
+
+/* mobile */
+@media screen and (max-width: 400px) and (max-height: 700px) {
+  table { font-size: 0.57em; }
+}

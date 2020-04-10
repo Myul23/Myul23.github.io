@@ -1,0 +1,88 @@
+body { font-size: 1.5em; }
+
+iframe {
+  background-color: azure;
+  border: none;
+  border-radius: 2em;
+  height: 96.99vh;
+  margin: 0.2% 0% 0.2% 0%;
+  width: 100%;
+}
+
+/* navigation bar */
+nav {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+button {
+  background-color: azure;
+  border-top-right-radius: 0.6em;
+  border-bottom-right-radius: 0.6em;
+  box-shadow: 0.16em 0.1em 0.3em gray;
+  color: forestgreen;
+  font-weight: bold;
+  height: 1.6em;
+  padding: 0.2em;
+  position: absolute;
+  right: -1.59em;
+  top: 10em;
+  transform: scale(2.5, 2.2);
+}
+
+nav > div {
+  background-color: azure;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  box-shadow: 0.16em 0.1em 0.3em gray;
+  display: none;
+  min-height: 93vh;
+  height: auto;  /*inherit*/
+  padding: 0em 0.5em 0em 0.5em;
+}
+
+nav h1 {
+  color: lightseagreen;
+  font-style: italic;
+  margin-bottom: 0%;
+}
+
+dl {
+  color: forestgreen;
+  width: auto;
+  min-width: 7.5em;
+  text-align: right;
+}
+
+dl > div { display: none; }
+
+dl > .horizon {
+  margin-left: 1.3em;
+  padding-bottom: 0.2em;
+}
+
+/* half */
+@media screen and (max-width: 960px) and (min-height: 900px) {
+  iframe { height: 97.36vh; }
+}
+
+/* quarter */
+@media screen and (max-width: 960px) and (max-height: 600px) {
+  iframe { height: 94.24vh; }
+  
+  nav { top: -3.5vh; }
+  
+  nav > div { height: 91vh; }
+}
+
+/* mobile */
+@media screen and (max-width: 400px) and (max-height: 700px) {
+  iframe { height: 96.7vh; }
+  
+  nav { top: -2.2vh; }
+  
+  nav > div { height: 95vh; }
+  
+  dl { min-width: 7em; }
+}

@@ -1,0 +1,12 @@
+body { font-size: 130%; }
+
+.box { margin-left: 0.62em; }
+
+div.box {
+  background-color: white;
+  border: 2px solid darkseagreen;
+  border-radius: 0.6em;
+  margin: 0.62em;
+  padding: 0.2em;
+  padding-top: 0px;
+}

@@ -1,0 +1,69 @@
+body {
+    position: relative;
+    font-size: 20pt;
+}
+body, .back { background-color: azure; }
+body, button { color: forestgreen; }
+
+header { font-size: 20px; }
+header, nav h1, h4, .point, a:link, a:visited { color: lightseagreen; }
+header > h1 { margin-bottom: 10px; }
+header, nav h1, h4, table, tr, td { border-bottom: 2px solid darkseagreen; }
+header, table { text-align: center; }
+
+nav h1, h4 { font-style: italic; }
+
+h4 { margin: 0px; }
+
+nav { position: fixed; }
+
+section {
+    font-size: 30px;
+    margin: 5pt 1em 5pt 1em;
+}
+
+iframe {
+    border: 0px;
+    border-radius: 3em;
+    width: 98%;
+    height: 90vh;
+    padding: 1%;
+    text-align: justify;
+}
+
+a { text-decoration: none; }
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 2px;
+    position: relative;
+    bottom: 6px;
+    transform: scale(2.5, 2.2);
+}
+
+span {
+    visibility: hidden;
+    position: absolute;
+}
+
+table { width: 100%; }
+table, tr, td { border-collapse: collapse; }
+td { background-color: white;}
+
+dl {
+    margin: 0px;
+    text-align: left;
+}
+dt { margin-left: 2em; }
+dd { margin-left: 3em; }
+
+hr { border-bottom: 1px solid darkseagreen; }
+
+.box {
+    display: none;
+    position: relative;
+    top: 10pt;
+    width: 30em;
+}

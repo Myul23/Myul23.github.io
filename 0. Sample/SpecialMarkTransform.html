@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformation</title>
+
+  <style>
+    textarea {
+      font-size: 1.5em;
+      margin: 2.4%;
+      margin-bottom: auto;
+      max-width: 95%;
+      min-width: 95%;
+      min-height: 5em;
+    }
+
+    button {
+      background-color: cornflowerblue;
+      border: solid 1px cornflowerblue;
+      font-size: 1.5em;
+      margin: auto 2.4% auto 2.4%;
+      padding: 2px;
+      width: 95.43%;
+    }
+  </style>
+</head>
+
+<body style="background-color: #f8f8f8; font-family: 'Times', serif;">
+  <a href="https://dev.w3.org/html5/html-author/charref">unless</a>
+  <textarea id="first" rows="7"></textarea>
+  <button onclick="transform();">to code string</button>
+  <textarea id="second" rows="7"></textarea>
+
+  <script>
+    var mark = [
+      ["!", "&excl;"],
+      ['"', "&quot;"],
+      ["#", "&num;"],
+      ["$", "&dollar;"],
+      ["%", "&percnt;"],
+      ["&", "&amp;"],
+      ["'", "&apos;"],
+      ["(", "&lpar;"],
+      [")", "&rpar;"],
+      ["*", "&ast;"],
+      ["+", "&plus;"],
+      [",", "&comma;"],
+      [".", "&period;"],
+      ["/", "&sol;"],
+      [":", "&colon;"],
+      [";", "&semi;"],
+      ["<", "&lt;"],
+      ["=", "&equals;"],
+      [">", "&gt;"],
+      ["?", "&quest;"],
+      ["@", "&commat;"],
+      ["[", "&lsqb;"],
+      ["\\", "&bsol;"],
+      ["]", "&rsqb;"],
+      ["^", "&Hat;"],
+      ["_", "&lowbar;"],
+      ["`", "&grave;"],
+      ["{", "&lcub;"],
+      ["|", "&verbar;"],
+      ["}", "&rcub;"]
+    ];
+
+    function transform() {
+      var pre = document.getElementById("first").value;
+      var next = "";
+
+      for (var i = 0; i < pre.length; i++) {
+        var check = 0;
+
+        for (var j = 0; j < 30; j++)
+          if (pre[i] === mark[j][0]) {
+            next += mark[j][1];
+            check = 1;
+            break;
+          }
+
+        if (check) continue;
+        else next += pre[i];
+      }
+
+      document.getElementById("second").value = next;
+    }
+  </script>
+</body></html>

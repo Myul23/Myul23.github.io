@@ -5,7 +5,7 @@ function LoginCheck() {
   point = point.toLowerCase();
 
   var change = "<a href='";
-  if (point === "sample") change += "0. Sample\\";
+  if (point === "sample") change += "0. Sample\\SampleRoom.html";
   else if (point === "덕질") change += "A.G.O.S\\Entrance.html";
   else if (point === "interesting") change += "Interesting\\";
   else if ((point === "lesson") || (point === "lessons"))

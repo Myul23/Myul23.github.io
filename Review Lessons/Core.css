@@ -5,7 +5,7 @@ iframe {
   border: none;
   border-radius: 2em;
   height: 96.99vh;
-  margin: 0.2% 0% 0.2% 0%;
+  margin: 0.2% 0%;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@ nav > div {
   display: none;
   min-height: 93vh;
   height: auto;  /*inherit*/
-  padding: 0em 0.5em 0em 0.5em;
+  padding: 0em 0.5em;
 }
 
 nav h1 {

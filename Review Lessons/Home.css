@@ -45,7 +45,7 @@ hr {
 @media screen and (max-width: 400px) and (max-height: 700px) {
   div {
     float: none;
-    margin: 0.5em auto 0.5em auto;  /* margin: 0.25em; */
+    margin: 0.5em auto;  /* margin: 0.25em; */
     width: 90%;  /* width: 45.22%; */
   }
 }

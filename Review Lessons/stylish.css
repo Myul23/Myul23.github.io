@@ -4,6 +4,8 @@
   outline-color: darkseagreen;
 }
 
+::-webkit-scrollbar { display: none; }
+
 ::selection {
   background-color: darkseagreen;
   color: azure;
@@ -41,3 +43,4 @@ div.indentation {
 }
 
 .horizon { border-bottom: 2px solid darkseagreen; }
+.dotted { border-bottom: 2px dotted darkseagreen; }

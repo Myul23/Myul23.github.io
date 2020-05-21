@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+  <!-- meta http-equiv="EXPIRES" content="Mon, 22 JUl 2002 11:12:01 GMT" /-->
+  <meta http-equiv="Pragam" content="NO-CACHE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>R</title>
+  <link type="text/css" rel="stylesheet" href="../stylish.css" />
+  <link type="text/css" rel="stylesheet" href="../lessons.css" />
+  <link type="text/css" rel="stylesheet" href="SAS.css" />
+  <script src="../dynamic.js"></script>
+  <script src="R.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>R</h1>
+  </header>
+
+  <div class="box">
+    <h2 onclick="spreadNext(this, 1);">Word Cloud<span>여기 이론은 죄다 프로그램화 시킬 거야</span></h2>
+    <div>
+      <a onclick="spreadNext(this, 1);">Requirements</a>
+      <div class="disappear">
+        packages&colon; &lsqb;wordcloud&comma; wordcloud2&rsqb;<br />
+      </div><br />
+    </div>
+    <div>
+      <a onclick="spreadNext(this, 1);">Crawling</a>
+      <div class="disappear">
+        <li>abstract &equals; &quot;some strings&#44; sentences&#44; and paragraphs&quot;</li>
+      </div>
+    </div>
+    <hr class="dotted" />
+    <div>
+      <a onclick="spreadNext(this, 1);">Korean</a>
+      <div class="disappear">
+        <a onclick="spreadNext(this, 1);">Java address setting</a>
+        <div class="disappear">
+          Sys&period;setenv&lpar;JAVA&lowbar;HOME&equals;&quot;C&colon;&sol;Program Files&sim;jre&sim;&quot;&rpar;
+        </div>
+        <a onclick="spreadNext(this, 1);">Add Requirements</a>
+        <div class="disappear">
+          packages&colon; KoNLP<br />
+          useSejongDic&lpar;&rpar;
+        </div><br />
+        noun &equals; extractNoun&#40;abstract&#41;<br />
+        noun &equals; noun&lsqb;nchar&#40;noun&#41; &gt; 1&rsqb;<br />
+        noun &equals; gsub&#40;&quot;정규방정식에 의해서 처리할 문장&quot;&#44; &quot;처리완료의 모습&quot;&#44; noun&#41;<br />
+        wordTable &equals; table&#40;noun&#41;
+      </div>
+      <hr class="dotted" />
+      <a onclick="spreadNext(this, 1);">English</a>
+      <div class="disappear">
+        <a onclick="spreadNext(this, 1);">Add Requirements</a>
+        <div class="disappear">
+          packages&colon; tm<br />
+        </div><br />
+        corpus &equals; Corpus&#40;VectorSource&#40;abstract&#41;&#41;<br />
+        corpus &equals; tm&#95;map&#40;corpus&#44; stripwhitespace&#41;<br />
+        corpus &equals; tm&#95;map&#40;corpus&#44; tolower&#41;<br />
+        corpus &equals; tm&#95;map&#40;corpus&#44; removePunctuation&#41;<br />
+        corpus &equals; tm&#95;map&#40;corpus&#44; removeNumbers&#41;<br />
+        corpus &equals; tm&#95;map&#40;corpus&#44; removeWords&#44; stopwords&#40;&quot;english&quot;&#41;&#41;<br /><br />
+        tdm &equals; TermDocumentMatrix&#40;corpus&#41;<br />
+        mat &equals; as&period;matrix&#40;tdm&#41;<br />
+        wordTable &equals; sort&#40;rowSums&#40;m&#41;&#44; decreasing &equals; T&#41;
+      </div>
+    </div>
+    <hr class="dotted" />
+    <div>
+      <a onclick="spreadNext(this, 1);">Drawing</a>
+      <div class="disappear">
+        pal &equals; brewer&period;pal&#40;8&#44; &quot;Dark2&quot;&#41;<br />
+        wordcloud&#40;words &equals; names&#40;wordTable&#41;&#44; freq &equals; wordTable&#44; colors &equals; pal&#44; min&period;freq &equals; int&#44; random&period;order &equals; F&#41;
+      </div>
+    </div>
+  </div>
+</body></html>

@@ -7,6 +7,12 @@ div.box {
   border: 2px solid darkseagreen;
   border-radius: 0.6em;
   margin: 0.62em;
-  padding: 0.2em;
-  padding-top: 0px;
+  padding: 0px 0.2em 0.5em 0.2em;
 }
+
+div li {
+  list-style-type: georgian;
+  margin-left: 0.5em;
+}
+
+a { margin-right: 2em; }

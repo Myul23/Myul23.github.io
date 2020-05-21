@@ -3,32 +3,22 @@ table {
   border-color: darkseagreen;
 }
 
-th {
-  padding: 0% 0.5%;
-  width: 20%;
-}
+th { padding: 0% 0.5%; }
 
 td { padding: 0% 1%; }
 
-body > div {
-  width: 46%;
-  padding: 0px 1em;
-  display: inline-grid;
+div { padding: 0px 1em; }
+
+h2 { margin: 0.35%; }
+
+span {
+  color: azure;
+  margin-left: 1em;
 }
 
-div > li {
-  list-style-type: georgian;
-  margin-left: 0.5em;
-}
-
-h2 { margin: 5px; }
-
-/* half */
-@media screen and (max-width: 960px) {
-  body > div { width: auto; }
-}
-
-/* quarter */
-@media screen and (max-width: 960px) and (max-height: 600px) {
-  body > div { width: auto; }
+@media screen and (min-width: 960px) {
+  .box {
+    width: 47.84%;
+    display: inline-grid;
+  }
 }

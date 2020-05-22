@@ -29,7 +29,9 @@ function spreadBefore(str, num) {
 }
 
 function spreadNext(str, num) {
-  var part = str.nextElementSibling;
+  if (str !== str.nextElementSibling)
+    var part = str.nextElementSibling;
+  else var part = str.parentElement.nextElementSibling;
   if (num > 1) spreadNext(part, num - 1);
   else spreadOrFold(part);
 }

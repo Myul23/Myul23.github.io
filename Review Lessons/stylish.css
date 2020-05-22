@@ -37,7 +37,7 @@ a {
 
 .disappear { display: none; }
 
-div.indentation {
+.indentation {
   display: block;
   margin-left: 1.5em;
 }

@@ -10,6 +10,8 @@ div.box {
   padding: 0px 0.2em 0.5em 0.2em;
 }
 
+div > a { margin-right: 1.2em; }
+
 div li {
   list-style-type: georgian;
   margin-left: 0.5em;

@@ -16,3 +16,8 @@ div li {
   list-style-type: georgian;
   margin-left: 0.5em;
 }
+
+hr {
+  border: none;
+  border-bottom: 2px dotted darkseagreen;
+}

@@ -20,20 +20,17 @@
   </header>
 
   <div class="box">
-    <h2 onclick="spreadNext(this, 1);">Word Cloud<span>여기 이론은 죄다 프로그램화 시킬 거야</span></h2>
+    <h2 onclick="spreadNext(this, 1);">Word Analysis<span>여기 이론은 죄다 프로그램화 시킬 거야</span></h2>
     <div>
-      <a onclick="spreadNext(this, 1);">Requirements</a>
-      <div class="disappear">
-        libraries&colon; &lsqb;wordcloud&comma; wordcloud2&rsqb;<br />
-      </div><br />
       <a onclick="spreadNext(this, 1);">Crawling</a>
       <div class="disappear">
+        <!-- crawling 파트를 한 블럭으로 만드는 것도 나쁘지 않을 듯. -->
         <li>abstract &equals; &quot;some strings&#44; sentences&#44; and paragraphs&quot;</li>
         <li><a onclick="spreadNext(this, 1);">Xpath</a></li>
         <div class="disappear">
           <a onclick="spreadNext(this, 1);">Add Requirements</a>
           <div class="disappear">
-            libraries&colon; &lsqb;XML&comma; Rcurl&rsqb;<br />
+            libraries&colon; &lsqb;XML&comma; RCurl&rsqb;<br />
           </div><br />
           webUrl &equals; &quot;http&#40;s&#41;&colon;&sol;&sol;www&period;&quot;<br />
           document &equals; GET&#40;webUrl&#41;<br />
@@ -60,7 +57,28 @@
             </select>&#41;<br />
             s &equals; html&#95;text&#40;s&#41;<br />
             abstract &equals; c&#40;abstract&#44; s&#41;</div>
-          &rcub;
+          &rcub;<br /><br />
+        </div>
+        <li><a onclick="spreadNext(this, 1);">Twitter</a></li>
+        <div class="disappear">
+          <a onclick="spreadNext(this, 1);">Add Requirements</a>
+          <div class="disappear">
+            libraries&colon; &lsqb;ROAuth&comma; twitteR&comma; RCurl&comma; base64enc&rsqb;<br />
+          </div><br />
+          <li><a onclick="spreadNext(this, 1);">Korean</a></li>
+          <div class="disappear">
+            setup&#95;twitter&#95;oauth&#40;consumerKey&#44; consumerSecret&#44; accessToken&#44; accessSecret&#41;<br /><br />
+            tweet &equals; searchTwitter&#40;enc2utf8&#40;koreanTag&#41;&#44; lang &equals; &quot;ko&quot;&#44; since &equals; &quot;0000&dash;00&dash;00&quot;&#44; until &equals; &quot;0000&dash;00&dash;00&quot;&#44; n &equals; 1000&#41;<br />
+            tweet&period;df &equals; twListToDF&#40;tweet&#41;<br />
+            tweet&period;df &equals; tweet&period;df&lsqb;tweet&period;df&dollar;retweetCount &gt; 5&#44; &rsqb;<br /><br />
+            abstract &equals; tweet&period;df&dollar;text<br /><br />
+          </div>
+          <li><a onclick="spreadNext(this, 1);">English</a></li>
+          <div class="disappear">
+            tweet &equals; userTimeline&#40;&quot;enlishTag&quot;&#44; n &equals; 1000&#41;<br /><br />
+            abstract &equals; do&period;call&#40;&quot;rbind&quot;&#44; lapply&#40;tweet&#44; as&period;data&period;frame&#41;&#41;<br />
+            abstract &equals; abstract&dollar;text
+          </div>
         </div>
       </div>
       <hr />
@@ -77,7 +95,7 @@
         </div><br />
         noun &equals; extractNoun&#40;abstract&#41;<br />
         noun &equals; noun&lsqb;nchar&#40;noun&#41; &gt; 1&rsqb;<br />
-        <a class="return" onclick="spreadNext(this, 1);">noun &equals; gsub&#40;&quot;정규방정식에 의해서 처리할 문장&quot;&#44; &quot;처리완료의 모습&quot;&#44; noun&#41;</a>
+        <a class="return" onclick="spreadNext(this, 1);">final &equals; gsub&#40;&quot;정규방정식에 의해서 처리할 문장&quot;&#44; &quot;처리완료의 모습&quot;&#44; noun&#41;</a>
         <div class="disappear return box">
           noun &equals; gsub&#40;&quot;&bsol;n&quot;&#44; &quot;&quot;&#44; noun&#41;<br />
           noun &equals; gsub&#40;&quot;&bsol;r&quot;&#44; &quot;&quot;&#44; noun&#41;<br />
@@ -86,8 +104,6 @@
           noun &equals; gsub&#40;&quot;RT&quot;&#44; &quot;&quot;&#44; noun&#41;
           noun &equals; gsub&#40;&quot;&lsqb;A&minus;Za&minus;z&rsqb;&quot;&#44; &quot;&quot;&#44; noun&#41;
         </div><br />
-        wordTable &equals; table&#40;noun&#41;<br />
-        wordTable &equals; sort&#40;wordTable&#44; decreasing &equals; T&#41;
       </div>
       <hr />
       <a onclick="spreadNext(this, 1);">English</a>
@@ -102,14 +118,22 @@
         corpus &equals; tm&#95;map&#40;corpus&#44; tolower&#41;<br />
         corpus &equals; tm&#95;map&#40;corpus&#44; removePunctuation&#41;<br /><br />
         stopwords &equals; c&#40;stopword&#40;&quot;english&quot;&#41;&#44; &quot;will&quot;&#44; &quot;sa&ast;&quot;&#41;<br />
-        corpus &equals; tm&#95;map&#40;corpus&#44; removeWords&#44; stopwords<br /><br />
-        tdm &equals; TermDocumentMatrix&#40;corpus&#41;<br />
-        mat &equals; as&period;matrix&#40;tdm&#41;<br />
-        wordTable &equals; sort&#40;rowSums&#40;m&#41;&#44; decreasing &equals; T&#41;
+        final &equals; tm&#95;map&#40;corpus&#44; removeWords&#44; stopwords&#41;
       </div>
       <hr />
-      <a onclick="spreadNext(this, 1);">Drawing</a>
+      <a onclick="spreadNext(this, 1);">Word Cloud</a>
       <div class="disappear">
+        <a onclick="spreadNext(this, 1);">Requirements</a>
+        <div class="disappear">
+          libraries&colon; &lsqb;wordcloud&comma; wordcloud2&comma; RColorBrewer&rsqb;<br />
+        </div><br />
+        <li>first</li>
+        wordTable &equals; table&#40;final&#41;<br />
+        wordTable &equals; sort&#40;wordTable&#44; decreasing &equals; T&#41;<br /><br />
+        <li>second</li>
+        tdm &equals; TermDocumentMatrix&#40;final&#41;<br />
+        mat &equals; as&period;matrix&#40;tdm&#41;<br />
+        wordTable &equals; sort&#40;rowSums&#40;m&#41;&#44; decreasing &equals; T&#41;<br /><br />
         pal &equals; brewer&period;pal&#40;8&#44; &quot;Dark2&quot;&#41;<br />
         wordcloud&#40;words &equals; names&#40;wordTable&#41;&#44; freq &equals; wordTable&#44; colors &equals; pal&#44; min&period;freq &equals; int&#44; random&period;order &equals; F&#41;
       </div>
@@ -120,11 +144,22 @@
         <div class="disappear">샘플용 긍정적인&comma; 부정적인 단어 모음</div><br />
         positive &equals; read&period;table&#40;&quot;positive words&period;&quot;&#41;<br />
         negative &equals; read&period;table&#40;&quot;negative words&period;&quot;&#41;<br /><br />
-        positive &equals; match&#40;abstract&#44; positive&#41;<br />
-        negative &equals; match&#40;abstract&#44; negative&#41;<br />
+        positive &equals; match&#40;final&#44; positive&#41;<br />
+        negative &equals; match&#40;final&#44; negative&#41;<br />
         positive &equals; &excl;is&period;na&#40;positive&#41;<br />
         negative &equals; &excl;is&period;na&#40;negative&#41;<br /><br />
         print&#40;sum&#40;positive&#41; &dash; sum&#40;negatiev&#41;&#44; sum&#40;positive&#41;&sol;&#40;sum&#40;positive&#41; &plus; sum&#40;negative&#41;&#41;&#41;
+      </div>
+      <hr />
+      <a onclick="spreadNext(this, 1);">단어 군집분석</a>
+      <div class="disappear">
+        <a onclick="spreadNext(this, 1);">Requirements</a>
+        <div class="disappear">library&colon; proxy</div><br />
+        tdm &equals; removeSparseTerms&#40;tdm&#44; sparse &equals; 0&period;94&#41;<br />
+        mat &equals; as&period;matrix&#40;tdm&#41;<br /><br />
+        dis &equals; dist&#40;mat&#44; method &equals; &quot;cosine&quot;&#41;<br />
+        hc &equals; hclust&#40;dis&#44; method &equals; &quot;complete&quot;&#41;<br />
+        plot&#40;hc&#41;
       </div>
     </div>
   </div>

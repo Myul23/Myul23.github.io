@@ -29,7 +29,7 @@ function spreadBefore(str, num) {
 }
 
 function spreadNext(str, num) {
-  if (str.nextElementSibling === null) {
+  if ((str.nextElementSibling === null) || (str.nodeName === "option")) {
     var part = str.parentElement;
     part = part.nextElementSibling;
   } else var part = str.nextElementSibling;

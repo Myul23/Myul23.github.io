@@ -9,3 +9,6 @@ It is a homepage and personal archive. It is just called a playground.
 goal list
 - arrange statistics concept studied
 - arrange R and Python main progress for theorems
+
+---
+2020.03.23 ~ 2020.03.26

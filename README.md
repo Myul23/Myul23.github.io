@@ -9,3 +9,5 @@ It is a homepage and personal archive. It is just called a playground.
 goal list
 - arrange statistics concept studied
 - arrange R and Python main progress for theorems
+---
+- xml로 만들어보고 싶긴 한데.. 갈아엎기 힘들 거 같은데

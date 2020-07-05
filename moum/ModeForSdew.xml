@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="modeMoum.xsl"?>
+<?xml-stylesheet type="text/css" href="modeMoum.css"?>
+<!DOCTYPE modeMoum SYSTEM "modeMoum.dtd">
+
+<modeMoum>
+  <title>Stardew Valley using Mode Moum(list)</title>
+  <mode>
+    <name>sia</name>
+    <scope>chalie puth</scope>
+    <site>imagine dragons</site>
+  </mode>
+  <mode>
+    <name>lucia</name>
+    <scope>amazarashi</scope>
+  </mode>
+  <mode>
+    <name>taru</name>
+    <scope>kinetic flow</scope>
+    <site>standing egg</site>
+  </mode>
+</modeMoum>

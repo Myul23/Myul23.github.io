@@ -2,8 +2,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
     <html style="font-family: Times New Roman, serif;">
-    <body style="font-size: 2.5em;">
-      <h3><xsl:value-of select="modeMoum/title" /></h3>
+    <body style="font-size: 5em;">
+      <p><xsl:value-of select="modeMoum/title" /></p>
       <table border="1" style="width: 100%;">
         <tr bgcolor="azure">
           <th>name</th>

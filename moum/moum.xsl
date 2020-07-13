@@ -4,7 +4,6 @@
 	<xsl:template match="/">
 		<html>
 			<body>
-				<script src="../dynamic.js"></script>
 				<p>
 					<xsl:value-of select="moum/title" />
 				</p>

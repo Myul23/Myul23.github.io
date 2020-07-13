@@ -1,8 +1,10 @@
-<!ELEMENT modeMoum (title, mode+)>
+<!ELEMENT moum (title, essential?, mode*)>
 
 <!ELEMENT title (#PCDATA)>
-<!ELEMENT mode (name, scope, site?)>
+<!ELEMENT essential (mode+)>
+<!ELEMENT mode (name, scope, site?, detail?)>
 
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT scope (#PCDATA)>
 <!ELEMENT site (CDATA)>
+<!ELEMENT detail (CDATA)>

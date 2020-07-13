@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="moum.xsl"?>
-<!DOCTYPE modeMoum SYSTEM "modeMoum.dtd">
+<?xml-stylesheet type="text/css" href="moum.css"?>
+<!DOCTYPE moum SYSTEM "moum.dtd">
 
-<modeMoum>
-  <title>Stardew Valley using Mode Moum(list)</title>
-  <mode>
-    <name>sia</name>
-    <scope>chalie puth</scope>
-    <site>imagine dragons</site>
-  </mode>
-  <mode>
-    <name>lucia</name>
-    <scope>amazarashi</scope>
-  </mode>
-  <mode>
-    <name>taru</name>
-    <scope>kinetic flow</scope>
-    <site>standing egg</site>
-  </mode>
-</modeMoum>
+<moum>
+	<title>Stardew Valley using Mode Moum(list)</title>
+	<essential>
+		<mode>
+			<name>SMAPI</name>
+			<scope>whole mode</scope>
+			<site>https://www.nexusmods.com/stardewvalley/mods/2400?tab=files</site>
+		</mode>
+	</essential>
+	<mode>
+		<name>sia</name>
+		<scope>chalie puth</scope>
+	</mode>
+	<mode>
+		<name>lucia</name>
+		<scope>amazarashi</scope>
+	</mode>
+	<mode>
+		<name>taru</name>
+		<scope>kinetic flow</scope>
+		<detail>standing egg</detail>
+	</mode>
+</moum>

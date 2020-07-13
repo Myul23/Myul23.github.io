@@ -1,7 +1,7 @@
 # *.c		# 정규방정식이 가능한 것으로 보입니다.
 # doc//**/*.pdf	# 이런 식으로도 가능하답니다.
 
-
+.vscode/
 1. imperfect/
 A.G.O.S/
 Review Lessons/Statistics/Concept.html

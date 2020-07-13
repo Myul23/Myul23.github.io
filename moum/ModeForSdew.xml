@@ -9,7 +9,7 @@
 		<mode>
 			<name>SMAPI</name>
 			<scope>whole mode</scope>
-			<site>https://www.nexusmods.com/stardewvalley/mods/2400?tab=files</site>
+			<!--site>https://www.nexusmods.com/stardewvalley/mods/2400?tab=files</site-->
 		</mode>
 	</essential>
 	<mode>

@@ -31,7 +31,6 @@
 							<xsl:attribute name="href">
 								<xsl:value-of select="site" />
 							</xsl:attribute>
-							<xsl:attribute name="target">_blank</xsl:attribute>
 							<xsl:value-of select="name" />
 						</xsl:element>
 					</th>

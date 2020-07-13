@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
-  <!-- meta http-equiv="EXPIRES" content="Mon, 22 JUl 2002 11:12:01 GMT" /-->
-  <meta http-equiv="Pragam" content="NO-CACHE" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base target="core" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <!-- meta http-equiv="EXPIRES" content="Mon, 22 JUl 2002 11:12:01 GMT" /-->
+    <meta http-equiv="Pragam" content="NO-CACHE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base target="core" />
 
-  <title>Core</title>
-  <link type="text/css" rel="stylesheet" href="stylish.css" />
-  <link type="text/css" rel="stylesheet" href="Core.css" />
-  <script src="dynamic.js"></script>
-</head>
+    <title>Core</title>
+    <link type="text/css" rel="stylesheet" href="stylish.css" />
+    <link type="text/css" rel="stylesheet" href="Core.css" />
+    <script src="dynamic.js"></script>
+  </head>
 
-<body>
-  <iframe src="Home.html" name="core">Click the left navigator bar, then click the section, please.</iframe>
+  <body>
+    <iframe src="Home.html" name="core">
+      Click the left navigator bar, then click the section, please.
+    </iframe>
 
-  <nav role="region" aria-label="link list">
-    <button onclick="change(this);">&gt;</button>
-    <div>
-      <h1 class="horizon">List</h1>
-      <dl>
-        <dt class="horizon" role="region" aria-label="home"><a href="Home.html" onclick="changeButton();">Home</a></dt>
-        <dt role="region" aria-label="statistics" tabindex="0" onclick="spreadNext(this, 1);">Statistics</dt>
-        <div class="horizon">
-          <dd><a href="Statistics/Concept.html">Concept</a></dd>
-          <dd><a href="Statistics/Theorem.html">Theorem</a></dd>
-          <dd>SPSS</dd>
-          <dd><a href="Statistics/SAS.html">SAS</a></dd>
-          <dd><a href="Statistics/R.html">R</a></dd>
-          <dd>Python</dd>
-        </div>
-        <dt role="region" aria-label="programming" tabindex="0" onclick="spreadNext(this, 1);">Programming</dt>
-        <div class="horizon">
-          <dd>C</dd>
-          <dd>C++</dd>
-          <dd>Java</dd>
-          <dd>Python</dd>
-        </div>
-        <dt role="region" aria-label="computer" tabindex="0" onclick="spreadNext(this, 1);">Computer</dt>
-        <div class="horizon">
-          <dd>Structure</dd>
-        </div>
-        <dt role="region" aria-label="website" tabindex="0" onclick="spreadNext(this, 1);">Website</dt>
-        <div class="horizon">
-          <dd><a href="Website/HTML&CSS.html">HTML</a></dd>
-          <dd><a href="Website/CSS.html">CSS</a></dd>
-          <dd>Javascript</dd>
-        </div>
-        <dt role="region" aria-label="language" tabindex="0" onclick="spreadNext(this, 1);">Language</dt>
-        <div>
-          <dd>Latin</dd>
-        </div>
-      </dl>
-    </div>
-  </nav>
-</body></html>
+    <nav role="region" aria-label="link list">
+      <button onclick="change(this);">&gt;</button>
+      <div>
+        <h1 class="horizon">List</h1>
+        <dl>
+          <dt class="horizon" role="region" aria-label="home">
+            <a href="Home.html" onclick="changeButton();">Home</a>
+          </dt>
+          <dt
+            role="region"
+            aria-label="statistics"
+            tabindex="0"
+            onclick="spreadNext(this, 1);"
+          >
+            Statistics
+          </dt>
+          <div class="horizon">
+            <dd><a href="Statistics/Concept.html">Concept</a></dd>
+            <dd><a href="Statistics/Theorem.html">Theorem</a></dd>
+            <dd>SPSS</dd>
+            <dd><a href="Statistics/SAS.html">SAS</a></dd>
+            <dd><a href="Statistics/R.html">R</a></dd>
+            <dd>Python</dd>
+          </div>
+          <dt
+            role="region"
+            aria-label="programming"
+            tabindex="0"
+            onclick="spreadNext(this, 1);"
+          >
+            Programming
+          </dt>
+          <div class="horizon">
+            <dd>C</dd>
+            <dd>C++</dd>
+            <dd>Java</dd>
+            <dd>Python</dd>
+          </div>
+          <dt
+            role="region"
+            aria-label="computer"
+            tabindex="0"
+            onclick="spreadNext(this, 1);"
+          >
+            Computer
+          </dt>
+          <div class="horizon">
+            <dd>Structure</dd>
+          </div>
+          <dt
+            role="region"
+            aria-label="website"
+            tabindex="0"
+            onclick="spreadNext(this, 1);"
+          >
+            Website
+          </dt>
+          <div class="horizon">
+            <dd><a href="Website/HTML&CSS.html">HTML</a></dd>
+            <dd><a href="Website/CSS.html">CSS</a></dd>
+            <dd>Javascript</dd>
+          </div>
+          <dt
+            role="region"
+            aria-label="language"
+            tabindex="0"
+            onclick="spreadNext(this, 1);"
+          >
+            Language
+          </dt>
+          <div>
+            <dd>Latin</dd>
+          </div>
+        </dl>
+      </div>
+    </nav>
+  </body>
+</html>

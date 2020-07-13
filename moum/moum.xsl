@@ -26,12 +26,12 @@
 				<xsl:sort select="name" />
 				<tr>
 					<th>
-						<xsl:element name="a">
+						<a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="site" />
 							</xsl:attribute>
 							<xsl:value-of select="name" />
-						</xsl:element>
+						</a>
 					</th>
 					<td>
 						<xsl:value-of select="scope" />

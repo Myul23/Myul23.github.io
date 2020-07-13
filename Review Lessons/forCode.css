@@ -3,13 +3,21 @@ table {
   border-color: darkseagreen;
 }
 
-th { padding: 0% 0.5%; }
+th {
+  padding: 0% 0.5%;
+}
 
-td { padding: 0% 1%; }
+td {
+  padding: 0% 1%;
+}
 
-div { padding: 0px 1em; }
+div {
+  padding: 0px 1em;
+}
 
-h2 { margin: 0.35%; }
+h2 {
+  margin: 0.35%;
+}
 
 span {
   color: white;
@@ -24,10 +32,13 @@ span {
 }
 
 /* half */
-@media screen and (max-width: 960px) {}
+@media screen and (max-width: 960px) {
+}
 
 /* quarter */
-@media screen and (max-width: 960px) and (max-height: 600px) {}
+@media screen and (max-width: 960px) and (max-height: 600px) {
+}
 
 /* mobile */
-@media screen and (max-width: 400px) and (max-height: 700px) {}
+@media screen and (max-width: 400px) and (max-height: 700px) {
+}

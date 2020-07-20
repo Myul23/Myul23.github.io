@@ -7,26 +7,25 @@
 				<p>
 					<xsl:value-of select="moum/title" />
 				</p>
-				<xsl:value-of select="moum/essential">
-					<xsl:apply-template select="mode" />
-				</xsl:value-of>
-				<xsl:value-of select="moum/general">
-					<xsl:apply-template select="mode" />
-				</xsl:value-of>
+				<xsl:for-each select="moum/essential">
+					<h3>
+						<xsl:value-of select="local-name()" />
+					</h3>
+					<xsl:apply-template />
+				</xsl:for-each>
 			</body>
 		</html>
 	</xsl:template>
 
 	<xsl:template match="mode">
-		<p>print</p>
-		<!--table border="1" style="width: 100%;">
+		<table border="1" style="width: 100%;">
 			<tr bgcolor="azure">
 				<th>name</th>
 				<th>scope</th>
 				<td>detail</td>
 			</tr>
+			<xsl:sort select="mode/name" />
 			<xsl:for-each select=".">
-				<xsl:sort select="name" />
 				<tr>
 					<th>
 						<a>
@@ -49,6 +48,6 @@
 					</td>
 				</tr>
 			</xsl:for-each>
-		</table-->
+		</table>
 	</xsl:template>
 </xsl:stylesheet>

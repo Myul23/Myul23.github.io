@@ -49,8 +49,9 @@ function spreadOrFold(part) {
       part.style.visibility === "hidden" ? "visible" : "hidden";
   } else {
     part.style.display =
-      part.style.display === "none" ||
-      (part.style.display === "" ? "block" : "none");
+      part.style.display === "none" || part.style.display === ""
+        ? "block"
+        : "none";
   }
 }
 

@@ -4,117 +4,110 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<script src="../Review Lessons/dynamic.js"></script>
+				<link type="text/css" ref="stylesheet" href="moum.css" />
 			</head>
 			<body>
 				<h1>
 					<xsl:value-of select="moum/title" />
 				</h1>
-				<xsl:value-of select="moum/essential">
-					<h3>
-						<xsl:value-of select="local-name()" />
-					</h3>
-					<table border="1" style="width: 100%;">
-						<tr bgcolor="azure">
-							<th>name</th>
-							<th>scope</th>
-							<td>detail</td>
+				<h3>essential</h3>
+				<table border="1" style="width: 100%;">
+					<tr bgcolor="azure">
+						<th>name</th>
+						<th>scope</th>
+						<td>detail</td>
+					</tr>
+					<xsl:for-each select="moum/essential/mode">
+						<xsl:sort select="name" />
+						<tr>
+							<th>
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="site" />
+									</xsl:attribute>
+									<xsl:value-of select="name" />
+								</a>
+							</th>
+							<td>
+								<xsl:value-of select="scope" />
+							</td>
+							<td>
+								<button onclick="spreadNext(this, 1, true);">addition</button>
+							</td>
 						</tr>
-						<xsl:for-each select="mode">
-							<xsl:sort select="name" />
-							<tr>
-								<th>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="site" />
-										</xsl:attribute>
-										<xsl:value-of select="name" />
-									</a>
-								</th>
-								<td>
-									<xsl:value-of select="scope" />
-								</td>
-								<td>
-									<button onclick="spreadNext(this, 1, true);">addition</button>
-								</td>
-							</tr>
-							<tr style="display: none;">
-								<td rowspan="3">
-									<xsl:value-of select="detail" />
-								</td>
-							</tr>
-						</xsl:for-each>
-					</table>
-				</xsl:value-of>
-				<xsl:value-of select="moum/upper">
-					<h3>
-						<xsl:value-of select="local-name()" />
-					</h3>
-					<table border="1" style="width: 100%;">
-						<tr bgcolor="azure">
-							<th>name</th>
-							<th>scope</th>
-							<td>detail</td>
+						<tr style="display: none;">
+							<td colspan="3">
+								<xsl:value-of select="detail" />
+							</td>
 						</tr>
-						<xsl:for-each select="mode">
-							<xsl:sort select="name" />
-							<tr>
-								<th>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="site" />
-										</xsl:attribute>
-										<xsl:value-of select="name" />
-									</a>
-								</th>
-								<td>
-									<xsl:value-of select="scope" />
-								</td>
-								<td>
-									<button onclick="spreadNext(this, 1, true);">addition</button>
-								</td>
-							</tr>
-							<tr style="display: none;">
-								<td rowspan="3">
-									<xsl:value-of select="detail" />
-								</td>
-							</tr>
-						</xsl:for-each>
-					</table>
-				</xsl:value-of>
-				<xsl:value-of select="moum/general">
-					<table border="1" style="width: 100%;">
-						<tr bgcolor="azure">
-							<th>name</th>
-							<th>scope</th>
-							<td>detail</td>
+					</xsl:for-each>
+				</table>
+
+				<h3>upper</h3>
+				<table border="1" style="width: 100%;">
+					<tr bgcolor="azure">
+						<th>name</th>
+						<th>scope</th>
+						<td>detail</td>
+					</tr>
+					<xsl:for-each select="moum/upper/mode">
+						<xsl:sort select="name" />
+						<tr>
+							<th>
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="site" />
+									</xsl:attribute>
+									<xsl:value-of select="name" />
+								</a>
+							</th>
+							<td>
+								<xsl:value-of select="scope" />
+							</td>
+							<td>
+								<button onclick="spreadNext(this, 1, true);">addition</button>
+							</td>
 						</tr>
-						<xsl:for-each select="mode">
-							<xsl:sort select="name" />
-							<tr>
-								<th>
-									<a>
-										<xsl:attribute name="href">
-											<xsl:value-of select="site" />
-										</xsl:attribute>
-										<xsl:value-of select="name" />
-									</a>
-								</th>
-								<td>
-									<xsl:value-of select="scope" />
-								</td>
-								<td>
-									<button onclick="spreadNext(this, 1, true);">addition</button>
-								</td>
-							</tr>
-							<tr style="display: none;">
-								<td rowspan="3">
-									<xsl:value-of select="detail" />
-								</td>
-							</tr>
-						</xsl:for-each>
-					</table>
-				</xsl:value-of>
+						<tr style="display: none;">
+							<td colspan="3">
+								<xsl:value-of select="detail" />
+							</td>
+						</tr>
+					</xsl:for-each>
+				</table>
+
+				<table border="1" style="width: 100%;">
+					<tr bgcolor="azure">
+						<th>name</th>
+						<th>scope</th>
+						<td>detail</td>
+					</tr>
+					<xsl:for-each select="moum/general/mode">
+						<xsl:sort select="name" />
+						<tr>
+							<th>
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="site" />
+									</xsl:attribute>
+									<xsl:value-of select="name" />
+								</a>
+							</th>
+							<td>
+								<xsl:value-of select="scope" />
+							</td>
+							<td>
+								<button onclick="spreadNext(this, 1, true);">addition</button>
+							</td>
+						</tr>
+						<tr style="display: none;">
+							<td colspan="3">
+								<xsl:value-of select="detail" />
+							</td>
+						</tr>
+					</xsl:for-each>
+				</table>
+				<script src="../Review Lessons/dynamic.js"></script>
 			</body>
 		</html>
 	</xsl:template>

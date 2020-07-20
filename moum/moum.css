@@ -1,13 +1,15 @@
-* {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 6em;
+body {
+  font-size: 1.2em;
 }
 
-essential {
-  font-size: 4em;
-  margin-bottom: 0.5em;
+h3 {
+  margin-bottom: -0.5em;
 }
 
-mode {
-  font-size: 3em;
+table {
+  margin: 1em 0px;
+}
+
+th {
+  width: 3em;
 }

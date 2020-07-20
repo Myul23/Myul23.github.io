@@ -1,6 +1,8 @@
-<!ELEMENT moum (title, essential?, upper?, general)>
+<!ELEMENT moum (title, list)>
 
 <!ELEMENT title (#PCDATA)>
+<!ELEMENT list (essential?, upper?, general)>
+
 <!ELEMENT essential (mode+)>
 <!ELEMENT upper (mode+)>
 <!ELEMENT general (mode+)>

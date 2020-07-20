@@ -22,24 +22,27 @@ function repeat(str, num) {
   for (var i = 0; i < num; i++) document.write(str);
 }
 
+function crossWalls(str, num1, num2, direction = "next") {
+  var part = str.parentElement;
+  for (; num1 > 1; num1--) part = part.parentElement;
+  if (direction === "next") spreadNext(part, num2);
+  else spreadBefore(part, num2);
+}
+
 function spreadBefore(str, num) {
   var part = str.previousElementSibling;
   if (num > 1) spreadBefore(part, num - 1);
   else spreadOrFold(part);
 }
 
-// 일단 next에 관한 것만 cross a wall하게 만들었음.
-function spreadNext(str, num, wall = false) {
-  if (
-    wall === true ||
-    str.nextElementSibling === null ||
-    str.nodeName === "option"
-  ) {
+// 더 폭 넓게 쓸 수 있는 함수가 된 거야. 좋게 생각하자.
+function spreadNext(str, num) {
+  if (str.nextElementSibling === null || str.nodeName === "option") {
     var part = str.parentElement;
     part = part.nextElementSibling;
   } else var part = str.nextElementSibling;
-  if (num > 1) spreadNext(part, num - 1);
-  else spreadOrFold(part);
+  for (; num > 1; num--) part = part.nextElementSibling;
+  spreadOrFold(part);
 }
 
 // HTML5 Element spread or fold

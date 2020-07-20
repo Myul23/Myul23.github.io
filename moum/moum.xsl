@@ -4,14 +4,13 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<link type="text/css" rel="stylesheet" href="../stylish.css" />
 				<link type="text/css" rel="stylesheet" href="moum.css" />
-				<script src="../dynamic.js"></script>
+				<script src="moum.js"></script>
 			</head>
 			<body>
-				<h2>
+				<h3>
 					<xsl:value-of select="moum/title" />
-				</h2>
+				</h3>
 				<xsl:apply-templates select="moum/essential" />
 				<xsl:apply-templates select="moum/upper" />
 				<xsl:apply-templates select="moum/general" />
@@ -20,14 +19,16 @@
 	</xsl:template>
 
 	<xsl:template match="essential">
-		<h3>
+		<h4>
 			<xsl:value-of select="local-name()" />
-		</h3>
+		</h4>
 		<table border="1" style="width: 100%;">
 			<tr bgcolor="azure">
 				<th>name</th>
-				<th>scope</th>
-				<td>detail</td>
+				<td>
+					<strong>scope</strong>
+				</td>
+				<td class="small">detail</td>
 			</tr>
 			<xsl:for-each select="mode">
 				<xsl:sort select="name" />
@@ -43,11 +44,11 @@
 					<td>
 						<xsl:value-of select="scope" />
 					</td>
-					<td>
-						<button onclick="spreadNext(this, 1, true);">addition</button>
+					<td class="small">
+						<button onclick="crossWalls(this);">addition</button>
 					</td>
 				</tr>
-				<tr style="display: none;">
+				<tr class="detail">
 					<td colspan="3">
 						<xsl:value-of select="detail" />
 					</td>
@@ -58,14 +59,16 @@
 	</xsl:template>
 
 	<xsl:template match="upper">
-		<h3>
+		<h4>
 			<xsl:value-of select="local-name()" />
-		</h3>
+		</h4>
 		<table border="1" style="width: 100%;">
 			<tr bgcolor="azure">
 				<th>name</th>
-				<th>scope</th>
-				<td>detail</td>
+				<td>
+					<strong>scope</strong>
+				</td>
+				<td class="small">detail</td>
 			</tr>
 			<xsl:for-each select="mode">
 				<xsl:sort select="name" />
@@ -81,11 +84,11 @@
 					<td>
 						<xsl:value-of select="scope" />
 					</td>
-					<td>
-						<button onclick="spreadNext(this, 1, true);">addition</button>
+					<td class="small">
+						<button onclick="crossWalls(this);">addition</button>
 					</td>
 				</tr>
-				<tr style="display: none;">
+				<tr class="detail">
 					<td colspan="3">
 						<xsl:value-of select="detail" />
 					</td>
@@ -99,8 +102,10 @@
 		<table border="1" style="width: 100%;">
 			<tr bgcolor="azure">
 				<th>name</th>
-				<th>scope</th>
-				<td>detail</td>
+				<td>
+					<strong>scope</strong>
+				</td>
+				<td class="small">detail</td>
 			</tr>
 			<xsl:for-each select="mode">
 				<xsl:sort select="name" />
@@ -116,11 +121,11 @@
 					<td>
 						<xsl:value-of select="scope" />
 					</td>
-					<td>
-						<button onclick="spreadNext(this, 1, true);">addition</button>
+					<td class="small">
+						<button onclick="crossWalls(this);">addition</button>
 					</td>
 				</tr>
-				<tr style="display: none;">
+				<tr class="detail">
 					<td colspan="3">
 						<xsl:value-of select="detail" />
 					</td>

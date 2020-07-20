@@ -14,19 +14,19 @@
 					<h3>
 						<xsl:value-of select="local-name()" />
 					</h3>
-					<xsl:apply-templates select="mode"/>
+					<xsl:apply-templates select="mode" />
 				</xsl:for-each>
 				<xsl:for-each select="moum/upper">
 					<h3>
 						<xsl:value-of select="local-name()" />
 					</h3>
-					<xsl:apply-templates select="mode"/>
+					<xsl:apply-templates select="mode" />
 				</xsl:for-each>
 				<xsl:for-each select="moum/general">
 					<h3>
 						<xsl:value-of select="local-name()" />
 					</h3>
-					<xsl:apply-templates select="mode"/>
+					<xsl:apply-templates select="mode" />
 				</xsl:for-each>
 			</body>
 		</html>
@@ -54,11 +54,11 @@
 						<xsl:value-of select="scope" />
 					</td>
 					<td>
-						<button onclick="spreadNext(this, 1);">addition</button>
+						<button onclick="spreadNext(this, 1, true);">addition</button>
 					</td>
 				</tr>
 				<tr style="display: none;">
-					<td colspan="3">
+					<td rowspan="3">
 						<xsl:value-of select="detail" />
 					</td>
 				</tr>

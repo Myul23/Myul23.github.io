@@ -3,7 +3,7 @@
 // 화살표 방향 바꾸기
 function change(part) {
   spreadNext(part);
-  part.innerHTML = (part.innerHTML === "&gt;") ? "&lt;" : "&gt;";
+  part.innerHTML = part.innerHTML === "&gt;" ? "&lt;" : "&gt;";
 }
 
 // Core 전용 메뉴(버튼) 닫기
@@ -28,8 +28,13 @@ function spreadBefore(str, num) {
   else spreadOrFold(part);
 }
 
-function spreadNext(str, num) {
-  if ((str.nextElementSibling === null) || (str.nodeName === "option")) {
+// 일단 next에 관한 것만 cross a wall하게 만들었음.
+function spreadNext(str, num, wall = false) {
+  if (
+    wall === true ||
+    str.nextElementSibling === null ||
+    str.nodeName === "option"
+  ) {
     var part = str.parentElement;
     part = part.nextElementSibling;
   } else var part = str.nextElementSibling;
@@ -39,10 +44,14 @@ function spreadNext(str, num) {
 
 // HTML5 Element spread or fold
 function spreadOrFold(part) {
-  if (part === '[object HTMLSpanElement]')
-    part.style.visibility = (part.style.visibility === "hidden") ? "visible" : "hidden";
-  else
-    part.style.display = ((part.style.display === "none") || (part.style.display === '')) ? "block" : "none";
+  if (part === "[object HTMLSpanElement]") {
+    part.style.visibility =
+      part.style.visibility === "hidden" ? "visible" : "hidden";
+  } else {
+    part.style.display =
+      part.style.display === "none" ||
+      (part.style.display === "" ? "block" : "none");
+  }
 }
 
 /*function display(str) {

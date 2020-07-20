@@ -8,10 +8,10 @@
 					<xsl:value-of select="moum/title" />
 				</p>
 				<xsl:for-each select="moum/essential">
-					<h3>
+					<h5>
 						<xsl:value-of select="local-name()" />
-					</h3>
-					<xsl:apply-template />
+					</h5>
+					<xsl:apply-templates />
 				</xsl:for-each>
 			</body>
 		</html>
@@ -24,8 +24,8 @@
 				<th>scope</th>
 				<td>detail</td>
 			</tr>
-			<xsl:sort select="mode/name" />
 			<xsl:for-each select=".">
+			<xsl:sort select="name" />
 				<tr>
 					<th>
 						<a>
@@ -39,7 +39,7 @@
 						<xsl:value-of select="scope" />
 					</td>
 					<td>
-						<button onclick="spreadNext(this, 1);"></button>
+						<button onclick="spreadNext(this, 1);">addition</button>
 					</td>
 				</tr>
 				<tr>

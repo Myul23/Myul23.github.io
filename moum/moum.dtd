@@ -8,7 +8,6 @@
 <!ELEMENT mode (name, scope, site?, detail?)>
 
 <!ELEMENT name (#PCDATA)>
-<!ATTLIST name needs IDREFS >
 <!ELEMENT scope (#PCDATA)>
-<!ELEMENT site (CDATA)>
-<!ELEMENT detail (CDATA)>
+<!ELEMENT site (#PCDATA)>
+<!ELEMENT detail (#PCDATA)>

@@ -10,7 +10,9 @@
 				<xsl:value-of select="moum/essential">
 					<xsl:apply-template select="mode" />
 				</xsl:value-of>
-				<xsl:apply-template select="general/mode" />
+				<xsl:value-of select="moum/general">
+					<xsl:apply-template select="mode" />
+				</xsl:value-of>
 			</body>
 		</html>
 	</xsl:template>

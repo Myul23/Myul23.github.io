@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="moum.xsl"?>
-<?xml-stylesheet type="text/css" href="moum.css"?>
+<!--?xml-stylesheet type="text/css" href="moum.css"?-->
 <!DOCTYPE moum SYSTEM "moum.dtd">
 
 <moum>
@@ -8,21 +8,23 @@
 	<essential>
 		<mode>
 			<name>SMAPI</name>
-			<scope>whole mode</scope>
-			<!--site>https://www.nexusmods.com/stardewvalley/mods/2400?tab=files</site-->
+			<scope>application whole modes</scope>
+			<site>https://www.nexusmods.com/stardewvalley/mods/2400?tab=files</site>
 		</mode>
 	</essential>
-	<mode>
-		<name>sia</name>
-		<scope>chalie puth</scope>
-	</mode>
-	<mode>
-		<name>lucia</name>
-		<scope>amazarashi</scope>
-	</mode>
-	<mode>
-		<name>taru</name>
-		<scope>kinetic flow</scope>
-		<detail>standing egg</detail>
-	</mode>
+	<general>
+		<mode>
+			<name>sia</name>
+			<scope>chalie puth</scope>
+		</mode>
+		<mode>
+			<name>lucia</name>
+			<scope>amazarashi</scope>
+		</mode>
+		<mode>
+			<name>taru</name>
+			<scope>kinetic flow</scope>
+			<detail>standing egg</detail>
+		</mode>
+	</general>
 </moum>

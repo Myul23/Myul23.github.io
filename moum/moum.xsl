@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
 		<html>
@@ -10,13 +10,14 @@
 				<xsl:value-of select="moum/essential">
 					<xsl:apply-template select="mode" />
 				</xsl:value-of>
-				<xsl:apply-template select="mode" />
+				<xsl:apply-template select="general/mode" />
 			</body>
 		</html>
 	</xsl:template>
 
 	<xsl:template match="mode">
-		<table border="1" style="width: 100%;">
+		<p>print</p>
+		<!--table border="1" style="width: 100%;">
 			<tr bgcolor="azure">
 				<th>name</th>
 				<th>scope</th>
@@ -46,6 +47,6 @@
 					</td>
 				</tr>
 			</xsl:for-each>
-		</table>
+		</table-->
 	</xsl:template>
 </xsl:stylesheet>

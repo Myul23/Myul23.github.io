@@ -1,10 +1,14 @@
-<!ELEMENT moum (title, essential?, mode*)>
+<!ELEMENT moum (title, essential?, upper?, general)>
 
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT essential (mode+)>
+<!ELEMENT upper (mode+)>
+<!ELEMENT general (mode+)>
+
 <!ELEMENT mode (name, scope, site?, detail?)>
 
 <!ELEMENT name (#PCDATA)>
+<!ATTLIST name needs IDREFS >
 <!ELEMENT scope (#PCDATA)>
 <!ELEMENT site (CDATA)>
 <!ELEMENT detail (CDATA)>

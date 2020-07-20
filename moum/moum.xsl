@@ -3,11 +3,26 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
 		<html>
+			<head>
+				<script src="../Review Lessons/dynamic.js"></script>
+			</head>
 			<body>
-				<p>
+				<h1>
 					<xsl:value-of select="moum/title" />
-				</p>
+				</h1>
 				<xsl:for-each select="moum/essential">
+					<h5>
+						<xsl:value-of select="local-name()" />
+					</h5>
+					<xsl:apply-templates />
+				</xsl:for-each>
+				<xsl:for-each select="moum/upper">
+					<h5>
+						<xsl:value-of select="local-name()" />
+					</h5>
+					<xsl:apply-templates />
+				</xsl:for-each>
+				<xsl:for-each select="moum/general">
 					<h5>
 						<xsl:value-of select="local-name()" />
 					</h5>
@@ -25,7 +40,7 @@
 				<td>detail</td>
 			</tr>
 			<xsl:for-each select=".">
-			<xsl:sort select="name" />
+				<xsl:sort select="name" />
 				<tr>
 					<th>
 						<a>

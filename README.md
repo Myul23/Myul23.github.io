@@ -7,6 +7,7 @@ It is just called a playground.
 
 현재 summary, programming, storage에서 요약하는 중.
 - live server 정말 애정합니다.
+- 해보고 싶은 게 있어서 개편 중.
 
 ---
 

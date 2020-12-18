@@ -6,6 +6,7 @@ It is just called a playground.
 ### hope upload one block everyday<br />
 
 현재 summary, programming, storage에서 요약하는 중.
+- live server 정말 애정합니다.
 
 ---
 
